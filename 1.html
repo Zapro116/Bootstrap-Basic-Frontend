@@ -1,0 +1,303 @@
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Title</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="1.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="mdb.min.css">
+
+    <script src="jquery.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="mdb.min.js"></script>
+    <script>
+    function switchDiv(a,b) {
+    let x = document.getElementById(a);
+    let y = document.getElementById(b);
+    if (x.classList.contains("fa-chevron-down"))
+    {
+      x.classList.remove("fa-chevron-down");
+      x.classList.add("fa-chevron-up");
+      y.classList.remove("d-none");
+    }
+    else
+    {
+      x.classList.remove("fa-chevron-up");
+      x.classList.add("fa-chevron-down");
+      y.classList.add("d-none");
+    }
+    }
+    </script>
+  </head>
+  <body>
+     <!--Navigation -->
+    <nav class="navbar navbar-expand-lg py-3 navbar-light">
+      <a class="navbar-brand a ml-4" href="#">Brand Name</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse ml-5" id="basicExampleNav">
+      <!-- Search Bar -->
+        <div class="wrap">
+          <div class="search">
+            <input type="text" class="searchTerm px-4" placeholder="Search...">
+            <button type="submit" class="searchButton">
+            <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link a" href="#">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link a" href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="blue darken-4">
+     <!--Window -->
+    <div class="container mx-auto colr row">
+    <img src="3.jpeg" class="img-fluid">
+    </div>
+
+    <div class="my-5 d-md-block d-none"></div>
+
+    <div class="container pb-5">
+    <div class="row">
+     <!--Left Side -->
+      <div class="col-xl-3 deep-purple lighten-4">
+      <nav class="navbar navbar-expand-xl navbar-dark primary-color">
+
+      <a class="navbar-brand d-xl-none mx-auto" href="#">Filter</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"  aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="filterD"><i class="fas fa-filter"></i></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="basicExampleNav">
+      <ul class="navbar-nav flex-column mx-auto">
+      <li class="nav-item lf_name">
+        <h5 class="mt-5 ml-1 row" id="switchAllCategories" onclick="switchDiv('allCategories','allCategoriesDiv')">
+        <b class="col-9">ALL CATEGORIES</b>
+        <a class="col-2">
+        <span class="ml-auto"><i class="fas fa-chevron-down" id="allCategories"></i></span>
+        </a>
+        </h5>
+        <hr class="hr">
+        <div class="d-none" id="allCategoriesDiv">
+        <input type="checkbox" id="Business"><label class="ml-2" for="Business">Business</label><br>
+        <input type="checkbox" id="CompSci"><label class="ml-2" for="CompSci">Computer Science</label><br>
+        <input type="checkbox" id="DataSci"><label class="ml-2" for="DataSci">Data Science</label><br>
+        <input type="checkbox" id="IT"><label class="ml-2" for="IT">Information Technology</label><br>
+        </div>
+      </li>
+
+      <li class="nav-item lf_name">
+        <h5 class=" mt-5 ml-1 row" id="switchCourseType" onclick="switchDiv('courseType','courseTypeDiv')">
+        <b class="col-9">COURSE TYPE</b>
+        <a class="col-2">
+        <span class="ml-auto"><i class="fas fa-chevron-up" id="courseType"></i></span>
+        </a>
+        </h5>
+        <hr class="hr">
+        <div class="" id="courseTypeDiv">
+        <input type="checkbox" id="freeCourse"><label class="ml-2" for="freeCourse">Free Course</label><br>
+        <input type="checkbox" id="paidCourse"><label class="ml-2" for="paidCourse">Paid Course</label><br>
+        </div>
+      </li>
+
+      <li class="nav-item lf_name">
+        <h5 class=" mt-5 ml-1 row" onclick="switchDiv('certification','certificationDiv')">
+        <b class="col-9">CERTIFICATION</b>
+        <a class="col-2">
+        <span class="ml-auto"><i class="fas fa-chevron-up" id="certification"></i></span>
+        </a>
+        </h5>
+        <hr class="hr">
+        <div class="" id="certificationDiv">
+        <input type="checkbox" id="certificationYes"><label class="ml-2" for="certificationYes">YES</label><br>
+        <input type="checkbox" id="certificationNo"><label class="ml-2" for="certificationNo">NO</label><br>
+      </li>
+
+      <li class="nav-item lf_name">
+        <h5 class=" mt-5 ml-1 row" onclick="switchDiv('courseDifficulty','courseDifficultyDiv')">
+        <b class="col-9">COURSE DIFFICULTY</b>
+        <a class="col-2">
+        <span class="ml-auto"><i class="fas fa-chevron-up" id="courseDifficulty"></i></span>
+        </a>
+        </h5>
+        <hr class="hr">
+        <div class="" id="courseDifficultyDiv">
+        <input type="checkbox" id="beginner"><label class="ml-2" for="beginner">Beginner</label><br>
+        <input type="checkbox" id="inter"><label class="ml-2" for="inter">Intermediate</label><br>
+        <input type="checkbox" id="advanced"><label class="ml-2" for="advanced">Advanced</label><br>
+        </div>
+      </li>
+
+      <div class="p-4">
+      </div>
+
+      </ul>
+      </div>
+      </nav>
+      </div>
+
+
+     <!--Right Side-->
+      <div class="col-xl-9 col-md-12 grey lighten-5">
+        <div class="my-4"></div>
+          <div class="row card-deck">
+            <div class="card mb-4 col-md-4 px-0 m-2">
+              <div class="view overlay">
+                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg" alt="Card image cap">
+                <a href="#!">
+                <div class="card_img1"></div>
+                <div class="card_img2 badge bg-primary">CERTIFIED &nbsp;<i class="fas fa-check"></i></div>
+                </a>
+              </div>
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <div class="card-text w-100 row mb-1">
+                <div class="col-7">
+                  <span class="difficulty"><b>BEGINNER</b></span>
+                </div>
+                <div class="col-5">
+                  <span>$ $$$</span>
+                </div>
+              </div>
+              <button type="button" class="btn btn_hov btn-md w-100">Read more</button>
+            </div>
+          </div>
+        <div class="card mb-4 col-md-4 px-0 m-2">
+          <div class="view overlay">
+            <img class="card-img-top card_img" src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg" alt="Card image cap">
+            <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+          <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <div class="card-text w-100 row mb-1">
+            <div class="col-8">
+              <span class="difficulty"><b>BEGINNER</b></span>
+            </div>
+            <div class="col-4">
+              <span>$ $$$</span>
+            </div>
+          </div>
+          <button type="button" class="btn btn_hov btn-md w-100">Read more</button>
+        </div>
+      </div>
+      <div class="card mb-4 col-md-4 px-0 m-2">
+        <div class="view overlay">
+          <img class="card-img-top card_img" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg" alt="Card image cap">
+          <a href="#!">
+          <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <div class="card-body">
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div class="card-text w-100 row mb-1">
+          <div class="col-8">
+            <span class="difficulty"><b>BEGINNER</b></span>
+          </div>
+          <div class="col-4">
+            <span>$ $$$</span>
+          </div>
+        </div>
+        <button type="button" class="btn btn_hov btn-md w-100">Read more</button>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="pb-5"></div>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small bg-dark pt-4">
+      <div class="container text-center text-md-left">
+        <div class="row">
+          <div class="col-md-3 mx-auto">
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">GET STARTED</h5>
+            <ul class="list-unstyled">
+              <li>
+               <a href="#!"><i class="fas fa-chevron-right"></i> &nbsp;Student</a>
+              </li>
+              <li>
+               <a href="#!"><i class="fas fa-chevron-right"></i> &nbsp;Educator</a>
+              </li>
+            </ul>
+          </div>
+        <hr class="clearfix w-100 d-md-none">
+        <div class="col-md-3 mx-auto">
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">ABOUT</h5>
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!"><i class="fas fa-chevron-right"></i> &nbsp;Team</a>
+          </li>
+          <li>
+            <a href="#!"><i class="fas fa-chevron-right"></i> &nbsp;Career</a>
+          </li>
+          <li>
+            <a href="#!"><i class="fas fa-chevron-right"></i> &nbsp;Reviews</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Grid column -->
+      <hr class="clearfix w-100 d-md-none">
+      <div class="col-md-3 mx-auto">
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">SUPPORT</h5>
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!"><i class="fas fa-chevron-right"></i> &nbsp;FAQ</a>
+          </li>
+          <li>
+            <a href="#!"><i class="fas fa-chevron-right"></i> &nbsp;Help Desk</a>
+          </li>
+        </ul>
+      </div>
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mx-auto">
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">LEGAL</h5>
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!"><i class="fas fa-chevron-right"></i> &nbsp;Terms of Service</a>
+          </li>
+          <li>
+            <a href="#!"><i class="fas fa-chevron-right"></i> &nbsp;Terms of Use</a>
+          </li>
+          <li>
+            <a href="#!"><i class="fas fa-chevron-right"></i> &nbsp;Privacy Policy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-4">© 2020 Copyright:
+    <a href="#"> somethingLikeUdemy.com</a>
+  </div>
+  </footer>
+  </body>
+</html>
